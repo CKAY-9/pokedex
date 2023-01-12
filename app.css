@@ -1,0 +1,85 @@
+:root {
+    --bg: rgb(18, 18, 20);
+    --card: rgb(40, 40, 50);
+    --cardText: rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bg: rgb(200, 50, 50);
+        --card: rgb(255, 255, 255);
+        --cardText: rgb(0, 0, 0);
+    }
+}
+
+body {
+    background-color: var(--bg);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    font-family: rubik;
+}
+
+.container {
+    padding: 40px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+}
+
+#pokedex {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 5vw;
+    padding-inline-start: 0;
+    margin: 5vh 15vw;
+}
+
+.card {
+    list-style: none;
+    padding: 40px;
+    background-color: var(--card);
+    color: var(--cardText);
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.card:hover {
+    animation: bounce 0.5s linear;
+}
+
+.card-title {
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    font-size: 32px;
+    font-weight: normal;
+}
+.card-subtitle {
+    margin-top: 5px;
+    color: #666;
+    font-weight: lighter;
+    text-transform: capitalize;
+}
+
+.card-image {
+    height: 180px;
+}
+
+@keyframes bounce {
+    20% {
+        transform: translateY(-6px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: translateY(-2px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
