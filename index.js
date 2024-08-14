@@ -37,7 +37,7 @@ const fetchPokemon = async () => {
 
 const displayPokeman = (pokeman) => {
     const card = document.createElement("a");
-    card.href = `/pokemon.html?pokemon=${pokeman.id}`;
+    card.href = `./pokemon.html?pokemon=${pokeman.id}`;
     card.classList.add("card");
     card.innerHTML = `
         <img class="card-image" src="${pokeman.sprites.front_default}" />
